@@ -12,6 +12,11 @@ public class ApplicationManager {
     AppiumDriver driver;
     DesiredCapabilities capabilities;
 
+    public NavigationHelper getNavigation() {
+        return navigation;
+    }
+
+    NavigationHelper navigation;
     ArticleHelper article;
 
     public ArticleHelper getArticle() {
@@ -25,9 +30,9 @@ public class ApplicationManager {
         capabilities.setCapability("deviceName", "qa23mob");
         capabilities.setCapability("appPackage", "org.wikipedia");
         capabilities.setCapability("appActivity", ".main.MainActivity");
-        capabilities.setCapability("app", "C:/Users/Tel-Ran.de/Documents/apk/org.wikipedia.apk");
+        capabilities.setCapability("app", "C:/projects/Tools/AndStudio/org.wikipedia.apk");
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
-
+        navigation = new NavigationHelper(driver);
         article = new ArticleHelper(driver);
     }
 

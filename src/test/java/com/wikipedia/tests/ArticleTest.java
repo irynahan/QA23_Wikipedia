@@ -12,5 +12,9 @@ public class ArticleTest extends TestBase{
         app.getArticle().addToFavorites();
         app.getArticle().createReadingList("MyFavorites");
         //remove article
+        app.getNavigation().openFavorieLists();
+        app.getNavigation().removeFromFavoritesList();
+
+
     }
 }
