@@ -11,6 +11,8 @@ public class ArticleTest extends TestBase{
         app.getArticle().searchArticle("TCP/IP");
         app.getArticle().addToFavorites();
         app.getArticle().createReadingList("MyFavorites");
+        app.getNavigation().openFavoriteLists();
+        app.getNavigation().removeFromFavoriteLists();
         //remove article
     }
 }
