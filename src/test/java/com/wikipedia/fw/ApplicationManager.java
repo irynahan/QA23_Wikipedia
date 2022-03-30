@@ -18,6 +18,11 @@ public class ApplicationManager {
 
     NavigationHelper navigation;
     ArticleHelper article;
+    NavigationHelper navigation;
+
+    public NavigationHelper getNavigation() {
+        return navigation;
+    }
 
     public ArticleHelper getArticle() {
         return article;
@@ -34,6 +39,7 @@ public class ApplicationManager {
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
         navigation = new NavigationHelper(driver);
         article = new ArticleHelper(driver);
+        navigation = new NavigationHelper(driver);
     }
 
     public void stop() {
